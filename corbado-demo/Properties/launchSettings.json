@@ -13,7 +13,8 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5286",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CORBADO_PROJECT_ID": "pro-7866377353921625373"
       },
       "dotnetRunMessages": true
     },
@@ -22,7 +23,8 @@
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7283;http://localhost:5286",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CORBADO_PROJECT_ID": "pro-7866377353921625373"
       },
       "dotnetRunMessages": true
     },
@@ -30,7 +32,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CORBADO_PROJECT_ID": "pro-7866377353921625373"
       }
     }
   }

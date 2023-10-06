@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string projectID = Environment.GetEnvironmentVariable("CORBADO_PROJECT_ID");
+    string authUrl = "https://" + @projectID + ".frontendapi.corbado.io/auth.js";
+    string utilityUrl = "https://" + @projectID + ".frontendapi.corbado.io/utility.js";
+    string cssUrl = "https://" + @projectID + ".frontendapi.corbado.io/auth_cui.css";
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,6 +13,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/corbado_demo.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href=@cssUrl asp-append-version="true" />
+    <script src=@authUrl></script>
+    <script src=@utilityUrl></script>
 </head>
 <body>
     <header>

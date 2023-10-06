@@ -1,0 +1,28 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Login with <a href="https://corbado.com">Corbado</a> here.</p>
+
+    @if (Model.ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+
+    <div>
+        <p>Project ID: @Environment.GetEnvironmentVariable("CORBADO_PROJECT_ID")</p>
+        <corbado-auth project-id=@Environment.GetEnvironmentVariable("CORBADO_PROJECT_ID") conditional="yes">
+            <input name="username"
+                   id="corbado-username"
+                   required
+                   autocomplete="webauthn" />
+        </corbado-auth>
+    </div>
+
+</div>
