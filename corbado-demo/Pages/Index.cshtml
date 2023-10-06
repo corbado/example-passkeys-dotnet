@@ -1,11 +1,48 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Login";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+	@if (@Model.ShowRequestId)
+	{
+		<p>
+			<strong>Request ID:</strong> <code>@Model.RequestId</code>
+		</p>
+	}
+<div>
+    @if (@Model.userID != null)
+    {
+        <h1 class="display-4">Welcome</h1>
+        <p>Project ID: @Environment.GetEnvironmentVariable("CORBADO_PROJECT_ID")</p>
+        <p>User ID: @Model.userID</p>
+        <p>User Name: @Model.userName</p>
+        <p>User Email: @Model.userEmail</p>
+        <button id="logoutButton">Logout</button>
+
+        <script inline="javascript">
+
+            const projectID = "@Environment.GetEnvironmentVariable("CORBADO_PROJECT_ID")";
+            const session = new Corbado.Session(projectID);
+            const logoutButton = document.getElementById('logoutButton');
+
+            logoutButton.addEventListener('click', function() {
+                session.logout()
+                    .then(() => {
+                        window.location.replace("/");
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+            });
+        </script>
+    }
+    else
+    {
+        <p>Please login to see your profile</p>
+    }
 </div>
 
+</div>
