@@ -9,8 +9,8 @@ This is a sample implementation of a .NET Core application that offers passkey a
 |   ├── api
 |   |   ...
 |   |   └── Pages
-|   |       ├── Index.cshtml      # Configuration of the authentication providers
-|   |       └── Login.cshtml      # Endpoint which requests an association token from Corbado
+|   |       ├── Index.cshtml      # The page which shows info about your profile when logged in
+|   |       └── Login.cshtml      # The login page
 |   |   
 |   └── Properties
 |       └── launchSettings.json   # Contains environment variables
