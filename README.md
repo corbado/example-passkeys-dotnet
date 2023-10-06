@@ -25,5 +25,5 @@ Open the launchSettings.json file and enter your projectID in all configurations
 
 ## Usage
 
-Open the solution is visual studio and run the project (Hit the "play" button or go to "Debug -> Start Debugging")
+Open the solution in Visual Studio and run the project (Hit the "play" button or go to "Debug -> Start Debugging")
 
