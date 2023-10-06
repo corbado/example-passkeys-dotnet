@@ -1,6 +1,6 @@
-# Passkey integration example for NextAuth.js
+# Passkey integration example for .NET Core
 
-This is a sample implementation of a .NET application that offers passkey authentication. For simple passkey-first authentication, the Corbado web component is used.
+This is a sample implementation of a .NET Core application that offers passkey authentication. For simple passkey-first authentication, the Corbado web component is used.
 
 ## File structure
 
