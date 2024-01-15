@@ -1,6 +1,8 @@
-# Passkey integration example for ASP.NET Core
+# Passkey-First Authentication with ASP.NET Core and Corbado
 
 This is a sample implementation of a ASP.NET Core application that offers passkey authentication. For simple passkey-first authentication, the Corbado web component is used.
+
+Please see the [full blog post](https://www.corbado.com/blog/passkeys-asp-net-core) to understand the detailed steps needed to integrate passkeys with ASP.NET Core apps.
 
 ## File structure
 
